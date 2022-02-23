@@ -15,9 +15,17 @@
   # home - Sets a user’s home directory
   # createhome: yes - Create a home directory for a user
   # createhome: no - Do not create a home directory for a user
+  
+    # Adding the ansible group
+    - name: Add group "ansible" to remote node
+      group:
+        name: ansible
+        gid: 2245
+        state: present
+
 
   # Creating the user Adam Listek
-    - name: Add the user 'Adam Listek' with a specific uid and a primary group of 'sudo'
+    - name: Add the user 'Adam Listek' with a specific uid
       ansible.builtin.user:
         name: adamlis
         comment: AdamListek
