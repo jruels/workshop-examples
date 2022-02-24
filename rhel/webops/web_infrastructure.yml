@@ -13,10 +13,10 @@
       dest: /etc/httpd/conf.d/nodeproxy.conf
     notify: apache-reload
 
-      #  - name: Install semanage
-      #yum:
-      # name: policycoreutils-python-utils
-      # state: latest
+  - name: Install semanage
+    yum:
+      name: policycoreutils-python-utils
+      state: latest
 
   - name: Allow SELinux Apache Proxy connect
     seboolean:
