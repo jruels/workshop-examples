@@ -11,7 +11,7 @@
     copy:
       src: nodeproxy.conf
       dest: /etc/httpd/conf.d/nodeproxy.conf
-    notify: apache-restart
+    notify: apache-reload
 
   - name: Install semanage
     yum:
@@ -52,7 +52,7 @@
     systemd:
       daemon_reload: yes
 
-  - name: apache-restart
+  - name: apache-reload
     systemd:
       name: httpd
-      state: restart
+      state: reload
