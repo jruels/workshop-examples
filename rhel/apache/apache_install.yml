@@ -9,8 +9,7 @@
       state: latest
 
   - name: Apache enabled and running
-    systemd:
+    service:
       name: httpd
-      daemon_reload: yes
       enabled: true
-      state: started
+      state: reloaded
