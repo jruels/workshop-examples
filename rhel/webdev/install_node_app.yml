@@ -18,3 +18,10 @@
     systemd:
       name: node
       state: restarted
+    notify: apache-reload
+
+  handlers:
+  - name: apache-reload
+    systemd:
+      name: httpd
+      state: reload
