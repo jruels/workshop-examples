@@ -55,4 +55,4 @@
   - name: apache-reload
     systemd:
       name: httpd
-      state: reload
+      state: reloaded
