@@ -9,4 +9,10 @@
         name: htptd
         state: present
       tags:
-        - fail
+        - stop
+    - name: Rollback failed install
+      yum:
+        name: httpd
+        state: present
+      tags:
+        - go
