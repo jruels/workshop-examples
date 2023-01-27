@@ -8,3 +8,5 @@
       yum:
         name: htptd
         state: present
+      tags:
+        - fail
