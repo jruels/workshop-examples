@@ -1,0 +1,10 @@
+---
+- name: Task to rollback failed Workflow demo
+  hosts: web 
+  become: yes
+  remote_user: ansible 
+  tasks:
+    - name: Rollback failed install
+      yum:
+        name: httpd
+        state: present
