@@ -1,0 +1,15 @@
+---
+- name: Nginx server installed
+  hosts: all
+
+  tasks:
+  - name: Nginx installed
+    yum:
+      name: Nginx
+      state: latest
+
+  - name: Nginx enabled and running
+    service:
+      name: nginx
+      enabled: true
+      state: reloaded
