@@ -5,7 +5,7 @@
   tasks:
   - name: Nginx installed
     yum:
-      name: Nginx
+      name: nginx
       state: latest
 
   - name: Nginx enabled and running
