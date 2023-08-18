@@ -7,14 +7,3 @@
     dnf:
       name:  nodejs
       state: present
-
-  - name: install nodejs systemd unit file
-    copy:
-      src: node.service
-      dest: /etc/systemd/system/node.service
-    notify: systemd-reload
-
-  handlers:
-  - name: systemd-reload
-    systemd:
-      daemon_reload: yes
