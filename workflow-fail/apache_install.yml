@@ -5,7 +5,7 @@
   tasks:
   - name: latest Apache version installed
     yum:
-      name: httpd
+      name: {{ pkg }}
       state: latest
 
   - name: Apache enabled and running
